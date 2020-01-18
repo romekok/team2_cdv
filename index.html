@@ -45,10 +45,11 @@
 					<script>
 					
 						jQuery(function(){							
-							var labelShow = $('.label');
-							var labelShowText = labelShow.text();
+							var labelShow = $('li');
+							var labelShowText = $('label').text();
 							labelShow.on('click',function(){
-								$(this).append(labelShowText);
+								var textToShow = $(this).text();
+								$(this).append(textToShow);
 							})
 							labelShow.each(function(){
 								console.log($(this).text());
