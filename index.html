@@ -5,13 +5,22 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+
 	<head>
-		<title>Aerial by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<title>Aerial by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 	</head>
+
+
+
 	<body class="is-preload">
 		<div id="wrapper">
 			<div id="bg"></div>
@@ -30,20 +39,46 @@
 								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
 								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
+							<ul>
+								<li><a href="#" class="icon brands fab fa-medium-m"><span class="label">Michał</span></a></li>
+								<li><a href="#" class="icon brands fab fa-gofore"><span class="label">Gerard</span></a></li>
+								<li><a href="#" class="icon brands fab fa-btc"><span class="label">Bartosz</span></a></li>
+								<li><a href="#" class="icon brands fab fa-etsy"><span class="label">Ernest</span></a></li>
+							</ul>
 						</nav>
 					</header>
+					<script>
+					
+						jQuery(function(){							
+							var labelShow = $('li');
+							var labelShowText = $('label').text();
+							labelShow.on('click',function(){
+								var textToShow = $(this).text();
+								$(this).append(textToShow);
+							})
+							labelShow.each(function(){
+								console.log($(this).text());
+							})
+						});					
+					
+					</script>
+
+
+
+
 
 				<!-- Footer -->
 					<footer id="footer">
-						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a> | <strong>zajęcia 18.01.2019</strong></span>
 					</footer>
 
-			</div>
 		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+	</div>
+	<script>
+		window.onload = function () { document.body.classList.remove('is-preload'); }
+		window.ontouchmove = function () { return false; }
+		window.onorientationchange = function () { document.body.scrollTop = 0; }
+	</script>
+</body>
+
 </html>
